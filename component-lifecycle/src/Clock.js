@@ -9,12 +9,13 @@ class Clock extends Component {
   //invoked immediately after a component is mounted.
   componentDidMount() {
     this.timerID = setInterval(() => this.tick(), 1000);
-    console.log("mount");
+    console.log("Component Mount : After rendering the page");
   }
 
   componentWillUnmount() {
-    console.log("unmount");
     clearInterval(this.timerID);
+
+    console.log(" Component Removed");
   }
 
   tick() {
