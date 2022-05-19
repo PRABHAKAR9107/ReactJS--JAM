@@ -36,3 +36,38 @@
     transform: rotate(360deg);
   }
 }
+
+.btn-wrapper button {
+  border: 1px solid red;
+  background: red;
+  padding: 10px;
+}
+.img-wrapper img {
+  width: 100px;
+  margin-top: -10px;
+}
+
+.item-wrapper {
+  border: 1px solid #ccc;
+
+  height: 150px;
+  width: 500px;
+  margin-left: 10%;
+}
+
+.item {
+  float: left;
+  display: inline-block;
+  width: 120px;
+  padding: 20px;
+  height: 70px;
+}
+
+.add-to-cart img {
+  width: 80px;
+  position: absolute;
+  right: 1%;
+  top: 1%;
+  opacity: 1;
+  background-color: none;
+}
