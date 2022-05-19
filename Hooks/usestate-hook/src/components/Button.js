@@ -16,7 +16,7 @@ export default function Button() {
   };
 
   const increment = () => {
-    newCount(count + 1);
+    newCount((prevCount) => prevCount + 10);
   };
 
   const decrement = () => {
@@ -36,7 +36,7 @@ export default function Button() {
         {/* <div> {greeting}</div> */}
         <button onClick={changeButton}>Click me</button>
         <div>
-          <p>you clicked {count}</p>
+          <p>you clicked {count} by 10</p>
           <button onClick={increment}>Increment</button>
         </div>
         <div>
