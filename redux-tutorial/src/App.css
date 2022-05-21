@@ -66,8 +66,16 @@
 .add-to-cart img {
   width: 80px;
   position: absolute;
-  right: 1%;
+  right: 2%;
   top: 1%;
   opacity: 1;
   background-color: none;
+}
+.cart-count {
+  float: right;
+}
+
+button.remove-btn {
+  margin: 10px;
+  background-color: blue;
 }
