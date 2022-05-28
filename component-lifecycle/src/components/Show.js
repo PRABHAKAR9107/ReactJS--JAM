@@ -4,13 +4,13 @@ export default class Show extends Component {
   constructor() {
     super();
     this.state = {
-      email: "chgfh@gmail.com",
+      email: "fbajfbjk@gmail.com ",
     };
     console.log("constructor:1");
   }
   static getDerivedStateFromProps(props, state) {
     console.log("getDerivedStateFromProps method is called");
-    return { newEmail: props.Email };
+    return { email: props.email };
   }
   render() {
     console.log("render");

@@ -3,8 +3,8 @@ import Child from "./Child";
 export default class Parent extends Component {
   state = { message: "" };
 
-  callbackFunction = (childData) => {
-    this.setState({ message: childData });
+  callbackFunction = (sendData) => {
+    this.setState({ message: sendData });
   };
   render() {
     return (
