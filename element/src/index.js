@@ -28,8 +28,10 @@ function tick() {
   root.render(
     <div>
       <App />
-      {element}
-      <Purecomponent />
+      <React.StrictMode>
+        {element}
+        <Purecomponent />
+      </React.StrictMode>
     </div>
   );
 }

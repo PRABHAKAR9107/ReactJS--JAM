@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 
 function Arrayusestate() {
-  const [items, setItems] = useState([]);
+  const [items, setItems] = useState([1, 2]);
+  console.log(items);
 
   const addItems = () => {
     setItems([
@@ -15,7 +16,8 @@ function Arrayusestate() {
     <div>
       Array useState
       <div>
-        <button onClick={addItems}>Random</button>
+        <button onClick={addItems}>Random </button>
+        {JSON.stringify(items)}
       </div>
       {items.map((item) => (
         <li key={item.value}>{item.value}</li>
