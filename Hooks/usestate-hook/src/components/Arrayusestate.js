@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 function Arrayusestate() {
-  const [items, setItems] = useState([1, 2]);
+  const [items, setItems] = useState([]);
   console.log(items);
 
   const addItems = () => {
@@ -19,8 +19,8 @@ function Arrayusestate() {
         <button onClick={addItems}>Random </button>
         {JSON.stringify(items)}
       </div>
-      {items.map((item) => (
-        <li key={item.value}>{item.value}</li>
+      {items.map((item, index) => (
+        <li key={index}>{item.value}</li>
       ))}
     </div>
   );

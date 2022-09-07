@@ -10,7 +10,7 @@ export default function Button() {
 
   const [name, newName] = useState("Hello Folks");
   const [count, newCount] = useState(0);
-  const [count1, newCount1] = useState(0);
+  const [count1, newCount1] = useState(5);
   const changeButton = () => {
     newName("Hello Prabhu");
   };
@@ -20,7 +20,13 @@ export default function Button() {
   };
 
   const decrement = () => {
-    newCount1(count1 - 1);
+    // if (count1 == 0) {
+    //   newCount1(0);
+    // } else {
+    //   newCount1(count1 - 1);
+    // }
+
+    newCount1(count1 === 0 ? 0 : count1 - 1);
   };
 
   //Always use arrow fn for useEffect
