@@ -7,12 +7,12 @@ function TItle() {
     setCount(count + 1);
   };
 
-  //   useEffect(() => {
-  //     document.title = `Title : ${count}`;
-  //     console.log("Mounting2");
+  // useEffect(() => {
+  //   document.title = `Title : ${count}`;
+  //   console.log("Mounting2");
 
-  //     //   Runs only on the first render
-  //   }, []);
+  //   //   Runs only on the first render
+  // }, []);
 
   useEffect(() => {
     document.title = `Title : ${count}`;
