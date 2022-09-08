@@ -14,21 +14,22 @@ function App() {
 
   const inputEl = useRef(" ");
 
-  console.log(inputEl, count, refEl);
+  console.log("inputEl:", inputEl, "Count", count, "refEl", refEl);
 
   useEffect(() => {
     count.current = count.current + 1;
-  });
+  }, [inputValue]);
 
   const resetValue = () => {
     setName("");
     refEl.current.focus();
     console.log("refHook1");
+    console.log("Reset value", name);
   };
 
   const handleInput = () => {
     refEl.current.style.color = "blue";
-    refEl.current.value = name;
+    refEl.current.value = "Type Name";
     console.log("refHook2");
   };
 
@@ -67,6 +68,7 @@ function App() {
 
         <input
           type="text"
+          ref={inputEl}
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
         />

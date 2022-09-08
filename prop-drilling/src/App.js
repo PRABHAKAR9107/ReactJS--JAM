@@ -1,8 +1,16 @@
 import logo from "./logo.svg";
 import "./App.css";
 import ChildA from "./ChildA";
+import React from "react";
+
+export const data = React.createContext();
 function App() {
   const nameP = "Prabhakar";
+
+  const student = {
+    name: "Rakesh",
+    class: "9th",
+  };
   return (
     <div className="App">
       <header className="App-header">
@@ -38,7 +46,14 @@ function App() {
       <hr />
       <div>
         <h3>Data pass from parent</h3>
-        <ChildA parent={nameP} />
+      </div>
+      <div>
+        <data.Provider value={student}>
+          <ChildA parent={nameP} />
+          <hr />
+          <h3> We can use Context-API to avoid prop-drilling</h3>
+          <ChildA />
+        </data.Provider>
       </div>
     </div>
   );
