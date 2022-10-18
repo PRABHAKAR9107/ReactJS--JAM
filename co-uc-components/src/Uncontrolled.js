@@ -12,6 +12,7 @@ function Uncontrolled() {
       Uncontrolled;
       <form onSubmit={handleSubmit}>
         <input type="text" ref={refEl} defaultValue="Prabhakar" />
+        {/* <h3>{refEl.current.value}</h3> */}
         <input type="submit" />
       </form>
     </div>

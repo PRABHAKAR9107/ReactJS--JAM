@@ -5,33 +5,33 @@ import React, { useRef, useEffect, useState } from "react";
 function App() {
   const [inputValue, setInputValue] = useState("");
 
-  const [name, setName] = useState("Prabhakar");
-  console.log(name);
+  // const [name, setName] = useState("Prabhakar");
+  // console.log(name);
 
-  const refEl = useRef(" ");
+  // const refEl = useRef(" ");
 
   const count = useRef(0);
 
-  const inputEl = useRef(" ");
+  // const inputEl = useRef(" ");
 
-  console.log("inputEl:", inputEl, "Count", count, "refEl", refEl);
+  // console.log("inputEl:", inputEl, "Count", count, "refEl", refEl);
 
   useEffect(() => {
     count.current = count.current + 1;
-  }, [inputValue]);
+  });
 
-  const resetValue = () => {
-    setName("");
-    refEl.current.focus();
-    console.log("refHook1");
-    console.log("Reset value", name);
-  };
+  // const resetValue = () => {
+  //   setName("");
+  //   refEl.current.focus();
+  //   console.log("refHook1");
+  //   console.log("Reset value", name);
+  // };
 
-  const handleInput = () => {
-    refEl.current.style.color = "blue";
-    refEl.current.value = "Type Name";
-    console.log("refHook2");
-  };
+  // const handleInput = () => {
+  //   refEl.current.style.color = "blue";
+  //   refEl.current.value = "Type Name";
+  //   console.log("refHook2");
+  // };
 
   return (
     <div className="App">
@@ -68,7 +68,7 @@ function App() {
 
         <input
           type="text"
-          ref={inputEl}
+          // ref={inputEl}
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
         />
@@ -76,14 +76,14 @@ function App() {
 
         <h3>Input field with ref element</h3>
 
-        <input
+        {/* <input
           type="text"
           ref={refEl}
           value={name}
           onChange={(e) => setName(e.target.value)}
-        />
-        <button onClick={resetValue}>Reset</button>
-        <button onClick={handleInput}>Handle</button>
+        /> */}
+        {/* <button onClick={resetValue}>Reset</button>
+        <button onClick={handleInput}>Handle</button> */}
       </div>
     </div>
   );

@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import Purecomponent from "./Purecomponent";
+import Purecomponentt from "./Purecomponent";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 const options = {
@@ -27,10 +27,10 @@ function tick() {
   );
   root.render(
     <div>
-      <App />
       <React.StrictMode>
+        <App />
         {element}
-        <Purecomponent />
+        <Purecomponentt />
       </React.StrictMode>
     </div>
   );

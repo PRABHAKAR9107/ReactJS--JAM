@@ -1,30 +1,26 @@
-import React, { PureComponent } from "react";
+import React from "react";
 
-export class Purecomponent extends PureComponent {
-  constructor(props) {
-    super(props);
-
+class Purecomponentt extends React.PureComponent {
+  constructor() {
+    super();
     this.state = {
-      data: 10,
+      counter: 0,
     };
+
+    // The value of Counter is updated to same value during continues interval
+
+    setInterval(() => {
+      this.setState({
+        counter: 0,
+      });
+    }, 1000);
   }
 
-  changeNumber = () => {
-    this.setState({
-      data: 20,
-    });
-  };
   render() {
-    console.log(this.state);
-    return (
-      <div>
-        PureComponent {this.state.data}
-        <div>
-          <button onClick={this.changeNumber}>click me</button>
-        </div>
-      </div>
-    );
+    // This function wont be re-rendered in case when the new state is same as previous
+    console.log("rendering");
+    return <b>Counter Value: {this.state.counter}</b>;
   }
 }
 
-export default Purecomponent;
+export default Purecomponentt;

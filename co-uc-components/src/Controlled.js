@@ -28,6 +28,7 @@ function Controlled() {
           }}
         />
         <br />
+        <h3>{fname}</h3>
         <label htmlFor="lname">Last name:</label>
         <br />
         <input
@@ -39,7 +40,7 @@ function Controlled() {
             setLname(e.target.value);
           }}
         />
-
+        <h3>{lname}</h3>
         <br />
         <br />
         <textarea

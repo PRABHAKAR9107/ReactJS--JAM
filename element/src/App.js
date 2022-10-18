@@ -6,8 +6,6 @@ export default function App() {
       <center>
         <h2 className="text-3xl font-bold underline">Elements in React</h2>
       </center>
-
-      <p></p>
     </div>
   );
 }
